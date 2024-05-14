@@ -5,6 +5,8 @@ export const ProductsSummaryCard = ({ product }) => {
     const dispatch = useDispatch();
     console.log("products ", product);
 
+
+
     return (
         <div className="flex p-1 sm:p-2 border-b border-b-gray-200">
             <div className="product-image mr-2 border border-grey-200 rounded-lg w-full sm:w-1/3">

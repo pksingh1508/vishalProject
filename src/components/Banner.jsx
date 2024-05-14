@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Button from "./elements/Button";
 
 export const Banner = () => {
@@ -11,9 +12,11 @@ export const Banner = () => {
                     Get Started Today!
                 </p>
                 <div className="btn-container">
-                    <a href="/menu" className="text-yellow-400 hover:text-yellow-500 font-bold text-decoration-line px-3">
+                    {/* <a href="/menu" className="text-yellow-400 hover:text-yellow-500 font-bold text-decoration-line px-3">
                         See Menu
-                    </a>
+                    </a> */}
+                    {/* <link to="/menu">Menu</link> */}
+                    <Link to="/menu" className="text-yellow-400 hover:text-yellow-500 font-bold text-decoration-line px-3">See Menu</Link>
                 </div>
             </div>
             <div className="banner-image w-full md:w-1/2 p-3 flex justify-end">

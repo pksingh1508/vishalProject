@@ -1,6 +1,9 @@
 import Button from "./elements/Button";
 
 const ProductDetailCard = ({ product, onAddProduct }) => {
+    const addProduct = () => {
+        onAddProduct(product)
+    }
     return (
         <div className="p-4 m-4 rounded-lg bg-slate-50">
             <div className="flex flex-col items-center justify-between">
@@ -16,8 +19,8 @@ const ProductDetailCard = ({ product, onAddProduct }) => {
                 <img src={product.imageUrl} className="w-40 h-40 rounded-xl object-cover" alt={product.name} />
             </div>
             <div className="w-full flex items-center justify-center">
-                {/* <Button onClick={() => onAddProduct}>Add to Cart</Button> */}
-                <button className="text-black text-lg font-bold rounded-xl transition duration-300 cursor-pointer focus:outline-none focus:ring-2 focus:ring-opacity-50" onClick={onAddProduct}>Add to Cart</button>
+                <Button onClick={addProduct}>Add to Cart</Button>
+                {/* <button className="text-black text-lg font-bold rounded-xl transition duration-300 cursor-pointer focus:outline-none focus:ring-2 focus:ring-opacity-50" onClick={onAddProduct}>Add to Cart</button> */}
             </div>
         </div>
     )
